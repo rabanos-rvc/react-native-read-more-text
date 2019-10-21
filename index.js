@@ -74,23 +74,15 @@ export default class ReadMore extends React.Component {
     let { shouldShowReadMore, showAllText } = this.state;
 
     if (shouldShowReadMore && !showAllText) {
-      if (this.props.renderTruncatedFooter) {
-        return this.props.renderTruncatedFooter(this._handlePressReadMore);
-      }
-
       return (
         <Text style={styles.button} onPress={this._handlePressReadMore}>
-          Read more
+          { this.props.renderTruncatedFooter }
         </Text>
       );
     } else if (shouldShowReadMore && showAllText) {
-      if (this.props.renderRevealedFooter) {
-        return this.props.renderRevealedFooter(this._handlePressReadLess);
-      }
-
       return (
         <Text style={styles.button} onPress={this._handlePressReadLess}>
-          Hide
+          { this.props.renderRevealedFooter }
         </Text>
       );
     }
