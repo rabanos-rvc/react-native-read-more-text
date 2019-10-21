@@ -112,6 +112,6 @@ const styles = StyleSheet.create({
   button: {
     color: "#1fa5ff",
     marginTop: 5,
-    textAlign: 'right
+    textAlign: 'right'
   }
 });
